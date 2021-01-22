@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import {ProductRoutes} from './routes/product';
+import {MediaRoutes} from './routes/media';
 class App{
    public app: express.Application;
    constructor(){
@@ -14,7 +14,7 @@ class App{
     }
   
    private allRoutes(): void{
-      this.app.use("/", ProductRoutes);
+      this.app.use("/", MediaRoutes);
     }
 }
 export default new App().app;
